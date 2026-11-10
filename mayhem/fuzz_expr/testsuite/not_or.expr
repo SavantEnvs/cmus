@@ -1,0 +1,1 @@
+!(genre="Rock" | album="x*") & bitrate>=128000

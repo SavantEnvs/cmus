@@ -1,0 +1,9 @@
+project: savantenvs/cmus
+target: fuzz_expr
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_expr/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/fuzz_expr
+    libfuzzer: true
+    timeout: 10

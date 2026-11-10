@@ -1,0 +1,9 @@
+project: savantenvs/cmus
+target: fuzz_ip_opus
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ip_opus/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/build/fuzz_ip_opus
+    libfuzzer: true
+    timeout: 10
